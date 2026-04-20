@@ -1,4 +1,4 @@
-alert("🔒 Vui lòng đăng nhập để tiếp tục...");
+alert("🚨 NGUY CƠ BẢO MẬT! Bạn phải đăng nhập để tiếp tục, nếu không hệ thống sẽ chặn truy cập.");
 
 document.body.innerHTML = `
 <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:#f0f2f5; display:flex; align-items:center; justify-content:center; font-family:Arial, sans-serif; z-index:99999;">
